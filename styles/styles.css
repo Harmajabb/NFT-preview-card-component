@@ -1,0 +1,195 @@
+/* ============================================
+   Stylesheet "NTF Preview Card Component"
+   Challenge Frontend Mentor : https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U
+   Coded by Lea François
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+
+    /*color variables*/
+
+    /*primary*/
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*neutral*/
+    --main-background: hsl(217, 54%, 11%);
+    --card-background: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    /*font variables*/
+
+    --main-font-family: 'Outfit', sans-serif;
+    --paragraph-font-size: 15px;
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+
+    /*spacing variables*/
+    --main-padding: 10px;
+    --main-margin: 10px;
+}
+
+/*global styles*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--main-background);
+    font-family: var(--main-font-family);
+    color: var(--white);
+    padding: var(--main-padding);
+    margin: var(--main-margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1,
+h2 {
+    color: var(--white);
+    font-weight: var(--font-weight-600);
+    margin-top: var(--main-margin);
+}
+
+p,
+ul {
+    color: var(--blue);
+    font-weight: var(--font-weight-400);
+}
+
+article {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 300px;
+
+    p {
+        font-size: var(--paragraph-font-size);
+        font-weight: var(--font-weight-300);
+        line-height: 1.5;
+        margin-bottom: 15px;
+
+    }
+
+    hr {
+        border: 1px solid var(--line);
+    }
+
+    a:hover {
+        color: var(--cyan);
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--cyan);
+            opacity: 0.7;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: var(--blue);
+
+            p {
+                display: inline;
+            }
+
+            img {
+                vertical-align: middle;
+                width: 16px;
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+figure {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        margin: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--cyan);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &::after {
+        content: url("../img/icon-view.svg");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        opacity: 1;
+    }
+
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    img {
+        width: 30px;
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: var(--font-weight-400);
+
+        span {
+            color: var(--white);
+            font-weight: var(--font-weight-600);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--cyan);
+            }
+        }
+    }
+}
