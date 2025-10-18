@@ -18,7 +18,7 @@ It helped me get comfortable with **HTML structure**, **CSS variables**, **hover
 
 ---
 
-## 🪞 Overview
+## Overview
 
 ### The Challenge
 Users should be able to:
@@ -29,8 +29,8 @@ Users should be able to:
 
 
 ### Links
-- 🌍 Live Site URL: [Add your live site link here](https://your-live-site-url.com)
-- 📦 Repository: [https://github.com/Harmajabb/nft-preview-card](https://github.com/Harmajabb/nft-preview-card)
+- 🌍 Live Site URL: [Click here](https://harmajabb.github.io/NFT-preview-card-component/)
+- 📦 Repository: [Click here](https://github.com/Harmajabb/NFT-preview-card-component)
 
 ---
 
